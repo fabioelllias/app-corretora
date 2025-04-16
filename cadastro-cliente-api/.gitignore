@@ -1,0 +1,60 @@
+# Arquivos de build e dependências
+**/[Bb]in/
+**/[Oo]bj/
+**/.vs/
+**/.vscode/
+**/.vsconfig
+**/*.user
+**/*.suo
+**/*.userprefs
+**/packages/
+**/TestResults/
+**/artifacts/
+**/Publish/
+**/appsettings.Development.json
+
+# Dependências do NuGet
+**/[Nn]uget.exe
+**/.nuget/
+**/packages/
+*.nupkg
+nuget.config
+
+# Arquivos de logs e temporários
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Ferramentas do .NET
+**/.dotnet/
+**/.toolstarget/
+**/.clideps/
+
+# Rider/ReSharper
+**/_ReSharper*/
+*.sln.iml
+*.csproj.DotSettings
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Docker
+**/docker-compose*.yml
+**/Dockerfile*
+**/.dockerignore
+
+# Azure Functions
+**/local.settings.json
+
+# IDE específico (Visual Studio)
+*.VC.db
+*.VC.VC.opendb
+
+# MacOS
+.DS_Store
