@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 import { MaskedTextInput } from 'react-native-mask-text';
+import { isValidCPF, isValidEmail } from './utils/validators';
 
 export default function App() {
   const [cpf, setCpf] = useState('');
@@ -18,6 +19,17 @@ export default function App() {
 
   const enviarKit = async () => {
     setLoading(true);
+
+    if(!isValidCPF(cpf)) {
+      Alert.alert('Erro', 'CPF inválido.');
+      setLoading(false);
+      return;
+    }
+    if(!isValidEmail(email)) {
+      Alert.alert('Erro', 'E-mail inválido.');
+      setLoading(false);
+      return;
+    }
 
     try {
       await axios.post('http://192.168.0.220:5210/api/cliente', {
